@@ -1,0 +1,4 @@
+.gradiantCover {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.6292892156862745) 35%, rgba(0,0,0,1) 100%);
+}
