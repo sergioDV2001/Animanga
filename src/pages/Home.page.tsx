@@ -7,7 +7,6 @@ import { Anime } from "../models";
 
 export function HomePage() {
   const [topAnimes, setTopAnimes] = useState<Anime[]>([]);
-  const [bestAnime, setBestAnime] = useState({});
 
   const getTopAnimes = {
     method: 'GET',
@@ -37,7 +36,7 @@ export function HomePage() {
             <button>+ Add to List</button>
           </div>
         </div>
-        <img className="object-cover w-full" src={topAnimes.length > 0 && topAnimes[0].trailer.images?.maximum_image_url} alt="coverAnime" />
+        <img className="object-cover w-full" src={topAnimes.length > 0 ? topAnimes[0].trailer.images?.maximum_image_url : ""} alt="coverAnime" />
         <div className="h-full w-full absolute z-40 gradiantCover"></div>
       </div>
       <div className="flex flex-col p-20 gap-20">
